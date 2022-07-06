@@ -41,4 +41,59 @@ const ejercicio = (palabras) => {
     console.log(`De la Z a la A: ${ordenAlfabeticoInverso}`);
 }
 
-ejercicio("Mi nombre es Harley Stiven Tovar Jimenez");
+//ejercicio("Mi nombre es Harley Stiven Tovar Jimenez");
+
+const ejercicio_2 = (parametro) => {
+    console.log(`Institución: ${parametro.name}`);
+    console.log(`Nombre: ${parametro.sites.site1.course1.aula2.student2.name}`);
+    console.log(`Apellido: ${parametro.sites.site1.course1.aula2.student2.lastName}`);
+    console.log(`Edad: ${parametro.sites.site1.course1.aula2.student2.age}`);
+}
+
+const institutions = {
+    name: "Universidad de la vida",
+    location: "Auto educación",
+    sites: {
+        site1: {
+            course1: {
+                aula1: {
+                    student1: {
+                        name: "Fredy",
+                        lastName: "Caseres",
+                        age: 21,
+                    },
+                    student2: {
+                        name: "Hector",
+                        lastName: "Ramirez",
+                        age: 28,
+                    },
+                    student3: {
+                        name: "Marcos",
+                        lastName: "Pedroza",
+                        age: 18,
+                    },
+                },
+                aula2: {
+                    student1: {
+                        name: "Carlos",
+                        lastName: "Mejia",
+                        age: 30,
+                    },
+                    student2: {
+                        name: "Pedro",
+                        lastName: "Rios",
+                        age: 35,
+                    },
+                    student3: {
+                        name: "Oscar",
+                        lastName: "Arcos",
+                        age: 18,
+                    },
+                },
+            }
+        }
+    }
+}
+let { name, lastName, age } = institutions.sites.site1.course1.aula1.student1;
+console.log(`El nombre del estudiante es ${name} ${lastName} edad ${age}`);
+//ejercicio_2(institutions);
